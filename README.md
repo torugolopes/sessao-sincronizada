@@ -1,0 +1,34 @@
+SESSÃO SINCRONIZADA — extensão do Chrome
+
+INSTALAR (repita em cada computador)
+1. Descompacte o .zip numa pasta fixa (ex.: Documentos/sessao-sincronizada).
+   Não apague a pasta depois: o Chrome carrega a extensão a partir dela.
+2. Abra chrome://extensions
+3. Ative "Modo do desenvolvedor" (canto superior direito).
+4. Clique em "Carregar sem compactação" e escolha a pasta.
+5. Clique no ícone de quebra-cabeça da barra e fixe a "Sessão Sincronizada".
+
+REQUISITO
+Os computadores precisam estar logados na mesma conta Google, com a
+sincronização do Chrome ativada (chrome://settings/syncSetup), incluindo
+"Extensões" ou "Configurações".
+
+USO
+- Na primeira vez, dê um nome para o computador (ex.: "PC do escritório").
+- Nova sessão: digite um nome (ex.: "Trabalho") e clique em "Salvar abas".
+  Ela guarda todas as janelas, abas, abas fixadas e grupos (nome, cor,
+  recolhido) deste computador.
+- Em cada sessão salva:
+  * Restaurar: abre tudo em janelas novas e recria os grupos. Com a opção
+    marcada, não reabre o que já está aberto.
+  * Atualizar: substitui a sessão pelas abas abertas agora (pede confirmação).
+  * Excluir: apaga a sessão (pede confirmação).
+  * Clique no nome para renomear.
+
+LIMITES
+- O espaço sincronizado do Chrome é de cerca de 100 KB no total, dividido
+  entre todas as sessões (algumas centenas de abas somando tudo). A barra
+  no rodapé mostra quanto já foi usado.
+- A sincronização entre computadores costuma levar de alguns segundos a
+  1 minuto.
+- Janelas anônimas e páginas de "Nova guia" não são salvas.
