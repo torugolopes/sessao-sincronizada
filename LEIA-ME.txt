@@ -19,8 +19,10 @@ USO
   Ela guarda todas as janelas, abas, abas fixadas e grupos (nome, cor,
   recolhido) deste computador.
 - Em cada sessão salva:
-  * Restaurar: abre tudo em janelas novas e recria os grupos. Com a opção
-    marcada, não reabre o que já está aberto.
+  * Restaurar: com "Completar as janelas abertas" marcado (padrão), acha a
+    janela correspondente que já está aberta e acrescenta nela só as abas
+    que faltam, na posição e no grupo certos. Desmarcado, abre uma cópia
+    completa da sessão em janelas novas.
   * Atualizar: substitui a sessão pelas abas abertas agora (pede confirmação).
   * Excluir: apaga a sessão (pede confirmação).
   * Clique no nome para renomear.
