@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArtD/zFeaDQIPw6n8/P6/TudxrVDFpS4GF5QvpCcS7Re73xye3W6gi9AaLK0/WqW+sOcC3o7XlpExlPIlYf2budSFyHXh60cbNdhV0NgEPpWQ9vdSXyAehNlvYDNIBHX4C8hXk4L3J5qoVIp1EEF0OMrB49y7RbGCeFf2wSqHeO1UOEtkkuA/SnDhrH1ru1Q+VX2JaT5wTnm8Wl11D3Cgu+/NAGLmYx2wU2JgK6B1WTDaSCxVOJjW15GTv/v7rdynoUEXI2d3tVzI2XtSm2A7EpKYn0skYc6U8CXgtbY09vsT8+t8Kbl/THxYZEhBh183RzE68e+4fw5gkMGDXWDNVQIDAQAB",
+  "name": "Sessão Sincronizada",
+  "version": "1.1.0",
+  "description": "Salva suas abas e grupos de abas e restaura em outro computador logado na mesma conta Google.",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Sessão Sincronizada",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

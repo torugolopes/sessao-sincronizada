@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Sessão Sincronizada</title>
+  <style>
+    :root { color-scheme: light dark; --azul: #1a73e8; --borda: #dadce0; --suave: #5f6368; --fundo2: #f8f9fa; --vermelho: #d93025; --laranja: #e37400; }
+    @media (prefers-color-scheme: dark) { :root { --borda: #3c4043; --suave: #9aa0a6; --azul: #8ab4f8; --fundo2: #2a2b2e; --vermelho: #f28b82; --laranja: #fdd663; } }
+    * { box-sizing: border-box; }
+    body { width: 360px; margin: 0; padding: 14px; font: 13px/1.4 system-ui, sans-serif; }
+    h1 { font-size: 15px; margin: 0 0 12px; }
+    h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--suave); margin: 14px 0 6px; font-weight: 600; }
+    label.campo { display: block; font-size: 12px; color: var(--suave); margin-bottom: 4px; }
+    input[type=text] { width: 100%; padding: 6px 8px; border: 1px solid var(--borda); border-radius: 6px; font: inherit; background: transparent; color: inherit; }
+    .suave { color: var(--suave); font-size: 12px; }
+    button { padding: 6px 10px; border-radius: 6px; border: 1px solid var(--borda); font: inherit; font-weight: 600; cursor: pointer; background: transparent; color: inherit; white-space: nowrap; }
+    button.principal { background: var(--azul); border-color: var(--azul); color: #fff; }
+    @media (prefers-color-scheme: dark) { button.principal { color: #202124; } }
+    button.confirmar { background: var(--laranja); border-color: var(--laranja); color: #fff; }
+    button.perigo { color: var(--vermelho); }
+    button.perigo.confirmar { background: var(--vermelho); border-color: var(--vermelho); color: #fff; }
+    @media (prefers-color-scheme: dark) { button.confirmar, button.perigo.confirmar { color: #202124; } }
+    button:disabled { opacity: .55; cursor: default; }
+    .nova { display: flex; gap: 6px; }
+    #lista { display: flex; flex-direction: column; gap: 8px; max-height: 330px; overflow-y: auto; }
+    .sessao { border: 1px solid var(--borda); border-radius: 8px; padding: 9px 10px; }
+    .sessao .topo { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+    .sessao .nome { font-weight: 600; font-size: 14px; cursor: text; overflow: hidden; text-overflow: ellipsis; }
+    .sessao .nome input { font-weight: 600; padding: 2px 4px; }
+    .sessao .acoes { display: flex; gap: 6px; margin-top: 8px; }
+    .sessao .acoes button:first-child { flex: 1; }
+    .vazio { border: 1px dashed var(--borda); border-radius: 8px; padding: 14px; text-align: center; }
+    .linha { display: flex; align-items: center; gap: 6px; font-size: 12px; margin-top: 10px; }
+    .uso { margin-top: 10px; }
+    .barra { height: 4px; background: var(--fundo2); border-radius: 2px; overflow: hidden; margin-top: 3px; }
+    .barra div { height: 100%; background: var(--azul); }
+    #status { margin-top: 8px; font-size: 12px; min-height: 16px; }
+    #status.erro { color: var(--vermelho); }
+    #status.ok { color: #188038; }
+    @media (prefers-color-scheme: dark) { #status.ok { color: #81c995; } }
+  </style>
+</head>
+<body>
+  <h1>Sessão Sincronizada</h1>
+
+  <label class="campo" for="computador">Nome deste computador</label>
+  <input id="computador" type="text" placeholder="Ex.: PC do escritório" maxlength="40">
+
+  <h2>Nova sessão</h2>
+  <div class="nova">
+    <input id="novoNome" type="text" placeholder="Ex.: Trabalho, Pessoal…" maxlength="40">
+    <button id="salvarNova" class="principal">Salvar abas</button>
+  </div>
+
+  <h2>Sessões salvas</h2>
+  <div id="lista"><span class="suave">Carregando…</span></div>
+
+  <div class="linha">
+    <input id="pular" type="checkbox" checked>
+    <label for="pular">Ao restaurar, não abrir de novo abas que já estão abertas</label>
+  </div>
+
+  <div class="uso suave">
+    <span id="usoTexto"></span>
+    <div class="barra"><div id="usoBarra" style="width:0"></div></div>
+  </div>
+
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
